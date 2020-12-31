@@ -36,16 +36,14 @@ export function CreateSetting(name, cssVarToChange, extraCode, addToVariable, se
 
 // functions for navigation and show or hide system
 function ShowOrHideBasedOnShowOrHidePropertyOfElement () {
-	document.getElementsByClassName(this.attributes.showOrHide)[0].classList.toggle("hide")
+	document.querySelector(this.attributes.showOrHide).classList.toggle("hide")
 	popupContainer.classList.toggle("backdrop")
 }
 
 // executions
-document.querySelectorAll("*").forEach(item => {
+document.querySelectorAll("*[show-or-hide]").forEach(item => {
 	item.attributes.showOrHide = item.getAttribute("show-or-hide");
-	if (item.attributes.showOrHide != null) {// if item has the show-ot-hide-property
-		item.addEventListener ("click", ShowOrHideBasedOnShowOrHidePropertyOfElement, false)
-	}
+	item.addEventListener ("click", ShowOrHideBasedOnShowOrHidePropertyOfElement, false)
 })
 
 popupContainer.addEventListener("click", () => {
