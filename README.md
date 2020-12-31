@@ -1,3 +1,3 @@
-# test-my-web-skills
+# importable css + js
 
-this is everything I can do on the web
+this is a 100% open source project for people who want to use basic css and js stylingfor there site.
