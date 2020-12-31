@@ -7,10 +7,6 @@ var settingsContent = document.getElementById("settings").appendChild(
 );
 
 //functions
-export function append(element, placeToAppend) {
-	return placeToAppend.appendChild (element)
-}
-
 export function updateCssVarAndTextOnChangedInput(label, input, cssVar, addToCssVar) {
 	label.innerHTML = input.value;
 	root.style.setProperty(cssVar, input.value + addToCssVar);//if addToCssVar isnt defined this wile return a error
