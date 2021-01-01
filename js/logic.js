@@ -50,12 +50,14 @@ document.querySelectorAll("*[show-or-hide]").forEach(item => {
 	item.addEventListener ("click", ShowOrHideBasedOnShowOrHidePropertyOfElement, false)
 })
 
-popupContainer.addEventListener("click", () => {
-	popups.forEach(popup => {
-		popup.classList.add("hide");
-	})
-	popupContainer.classList.remove("backdrop");
-}, false)
+if (popupContainer != null) {
+	popupContainer.addEventListener("click", () => {
+		popups.forEach(popup => {
+			popup.classList.add("hide");
+		})
+		popupContainer.classList.remove("backdrop");
+	}, false)
+}
 
 //create settings
 CreateSetting(
