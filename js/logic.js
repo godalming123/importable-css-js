@@ -54,7 +54,7 @@ popupContainer.addEventListener("click", () => {
 }, false)
 
 //create settings
-main.CreateSetting(
+CreateSetting(
 	"animation duration",
 	"--transition",
 	function (settingsInput) {
@@ -66,7 +66,7 @@ main.CreateSetting(
 	"range"
 );
 
-main.CreateSetting(
+CreateSetting(
 	"roundness",
 	"--border-radius",
 	function (settingsInput) {
