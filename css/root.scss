@@ -27,9 +27,3 @@
 	scroll-behavior: smooth;
 	&:hover {z-index: 8;}
 }
-
-body {
-	//add stacking context
-	position: relative;
-	z-index: 1;
-}
