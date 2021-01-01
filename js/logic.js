@@ -2,9 +2,11 @@
 var root = document.querySelector(":root");
 var popupContainer = document.querySelector(".popups");
 var popups = document.querySelectorAll(".popups > *")
-var settingsContent = document.getElementById("settings").appendChild(
-	document.createElement("content")
-);
+try {
+	var settingsContent = document.getElementById("settings").appendChild(
+		document.createElement("content")
+	);
+}catch { var settingsContent = null; }
 
 //functions
 export function updateCssVarAndTextOnChangedInput(label, input, cssVar, addToCssVar) {
