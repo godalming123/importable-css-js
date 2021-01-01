@@ -20,15 +20,17 @@ export function liveInputToCssVarAndLabel (label, input, cssVar, addToCssVar) {
 }
 
 export function CreateSetting(name, cssVarToChange, extraCode, addToVariable, settingType = "range") {
-	var settingsContainer = settingsContent.appendChild(document.createElement("label"));
-	settingsContainer.append(name)
-	
-	var settingsInput = settingsContainer.appendChild(document.createElement("input"));
-	settingsInput.setAttribute("type", settingType);
+	if (settingsContent != null) {
+		var settingsContainer = settingsContent.appendChild(document.createElement("label"));
+		settingsContainer.append(name)
+		
+		var settingsInput = settingsContainer.appendChild(document.createElement("input"));
+		settingsInput.setAttribute("type", settingType);
 
-	var settingsLabel = settingsContainer.appendChild(document.createElement("span"))
+		var settingsLabel = settingsContainer.appendChild(document.createElement("span"))
 
-	extraCode(settingsInput);
+		extraCode(settingsInput);
+	}
 
 	// updating everything when settings changes
 	liveInputToCssVarAndLabel(settingsLabel, settingsInput, cssVarToChange, addToVariable);
