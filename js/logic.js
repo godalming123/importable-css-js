@@ -10,9 +10,7 @@ try {
 
 //functions
 export function updateCssVarAndTextOnChangedInput(label, input, cssVar, addToCssVar) {
-	try {
-		label.innerHTML = input.value;
-	}catch {}
+	label.innerHTML = input.value;
 	root.style.setProperty(cssVar, input.value + addToCssVar);//if addToCssVar isnt defined this wile return a error
 }
 
