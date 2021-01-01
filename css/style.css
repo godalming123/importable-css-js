@@ -39,6 +39,11 @@ h2 {
   font-size: 4.5vh;
 }
 
+.stackingContext {
+  position: relative;
+  z-index: 1;
+}
+
 /*input {
 	&[type="range"] {
 		width: 10vh;
