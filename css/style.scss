@@ -45,6 +45,9 @@ h2 {
 
 .callToAction {
 	--font-size: 4vh !important;
+	&.right {
+		float: right;
+	}
 }
 
 /*input {

@@ -52,6 +52,10 @@ h2 {
   --font-size: 4vh !important;
 }
 
+.callToAction.right {
+  float: right;
+}
+
 /*input {
 	&[type="range"] {
 		width: 10vh;
