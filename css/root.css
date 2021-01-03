@@ -10,6 +10,8 @@
   --lighten: hsla(0, 0%, 100%, 10%);
   --background-lighten: hsla(var(--HS-color), 20%, 80%);
   --font-family: none;
+  --transition: 1s;
+  --border-radius: 1vh;
   background: var(--shade2);
   color: var(--shade1);
   font-size: var(--font-size);
