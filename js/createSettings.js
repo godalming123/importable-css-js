@@ -1,4 +1,4 @@
-import "./logic.js";
+import {CreateSetting} from "./logic.js";
 
 CreateSetting(
 	"animation duration",
