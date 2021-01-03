@@ -44,6 +44,10 @@ h2 {
   z-index: 1;
 }
 
+.space-items * {
+  margin-left: 1vh;
+}
+
 /*input {
 	&[type="range"] {
 		width: 10vh;
