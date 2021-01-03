@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACL,OAAO,EAAE,IAAI;CAIb;;AALD,AAEC,KAFI,AAEH,eAAe,CAAC;EAChB,eAAe,EAAE,YAAY;CAC7B",
+    "sources": [
+        "flex-display.scss"
+    ],
+    "names": [],
+    "file": "flex-display.css"
+}
