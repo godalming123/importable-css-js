@@ -1,4 +1,4 @@
-import "./logic.js"
+import "https://godalming123.github.io/importable-css-js/js/logic.js";
 
 CreateSetting(
 	"animation duration",
