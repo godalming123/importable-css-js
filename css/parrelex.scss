@@ -1,0 +1,18 @@
+.scrollSlow {
+  transform: translateZ(-1px) scale(2);
+	z-index: -1 !important;
+	position: relative;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
