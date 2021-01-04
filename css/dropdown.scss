@@ -1,3 +1,5 @@
+$dropodwn-items: 10;
+
 content {
 	//position
 	top: 100%;
@@ -6,8 +8,19 @@ content {
 	position: absolute;
 
 	background: var(--shade3);
-	transform: scaleY(0);
-	transform-origin: top;
+
+	* {
+		transform: scale(0);
+		transform-origin: top;
+	}
+
+	@for $iteration from 0 through $dropodwn-items {
+		& > *:nth-child(#{$iteration}) {
+			transition:
+				transform 0.15s, box-shadow 1s;
+			transition-delay: ($iteration * 0.15) + s;
+		}
+	}
 }
 
 dropdown {
@@ -40,8 +53,8 @@ dropdown {
 
 	&:hover, &:focus-within {//hovered dropdown
 		box-shadow: var(--shadow);
-		& > content {//hovered dropdown > content
-			transform: initial !important;
+		& > content > * {//hovered dropdown > content
+			transform: initial !important;		
 		}
 		&::after {//hovered dropdown::after
 			clip-path: var(--arrow-open);

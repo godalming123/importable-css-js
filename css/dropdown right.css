@@ -1,12 +1,13 @@
 dropdown.right content {
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
   top: 0;
   left: 100%;
   min-height: 100%;
   /*force height to be size of idropdown title*/
+}
+
+dropdown.right content > * {
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 dropdown.right::after {
