@@ -8,12 +8,14 @@
 	<link rel="stylesheet" href="css/dropdown right.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/root.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<script type="module" defer src="js/logic.js"></script>
 </head>
 <body>
 	<dropdown>
 		a test
 		<content>
-			<a href="">some content</a>
+			<a show-or-hide=".test-popup">some content</a>
 			<dropdown class="right">
 				a right dropdown
 				<content>
@@ -23,5 +25,10 @@
 			</dropdown>
 		</content>
 	</dropdown>
+	<div class="popups">
+		<div class="test-popup hide">
+			a test popup
+		</div>
+	</div>
 </body>
 </html>
