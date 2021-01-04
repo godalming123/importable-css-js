@@ -10,9 +10,9 @@ html {
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100%;
+  overflow: scroll;
+	height: 100%;
+	width: 100%;
   perspective: 1px;
   transform-style: preserve-3d;
 }
