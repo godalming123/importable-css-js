@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  overflow: scroll;
+  overflow: auto;
   height: 100%;
   width: 100%;
   -webkit-perspective: 1px;
