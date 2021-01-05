@@ -5,7 +5,21 @@ importKeywords = [
 	["base", [
 		"logic.js.module",
 		"style.css",
-		"root.css"
+		"root.css",
+		"scrollbar.css"
+	]],
+
+	["all", [
+		"dropdown.css",
+		"dropdown_right.css",
+		"popup.css",
+		"header.css",
+		"scroll_snap.css",
+		"futuristic.css",
+		"flashy.css",
+		"section_img_header.css",
+		"parrelex.css",
+		"createSettongs.js"
 	]]
 ]
 
