@@ -29,7 +29,7 @@ function importCss(path, type) {
 	tag.rel = 'stylesheet';  
 	tag.href = path;
 
-	head.appendChild(tag)
+	head.appendChild(tag);
 }
 
 function importJs(path, type) {
@@ -44,13 +44,13 @@ function importJs(path, type) {
 
 function importJsOrCss(file) {
 	//setting up vars
-	var parts = file.split(".")
+	var parts = file.split(".");
 	var importType = parts[2];
 	var importEnding = parts[1];
 	var path = (importTag.getAttribute("path") + "/" + importEnding + "/" + parts[0] + "." + importEnding).replaceAll("_", " ");
 
-	if (importEnding == "css") { importCss(path, importType) }
-	else if (importEnding == "js") { importJs(path, importType) }
+	if (importEnding == "css") { importCss(path, importType); }
+	else if (importEnding == "js") { importJs(path, importType); }
 }
 
 for (importTag of importTags) {
