@@ -12,6 +12,7 @@ html {
 
 body {
   overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
   -webkit-perspective: 1px;
           perspective: 1px;

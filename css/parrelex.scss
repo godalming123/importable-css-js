@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  overflow-y: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	height: 100%;
   perspective: 1px;
   transform-style: preserve-3d;
