@@ -42,7 +42,7 @@ function importJs(path, type) {
 	head.appendChild(tag);
 }
 
-function importJsOrCss(file) {
+function importJsOrCss(file, importTag) {
 	//setting up vars
 	var parts = file.split(".");
 	var importType = parts[2];
@@ -59,11 +59,11 @@ for (importTag of importTags) {
 		//if import is a keywaord like popup than we can import everything needed to implement that
 		for (importKeyword of importKeywords) {
 			if (import_ == importKeyword[0]) {
-				importKeyword[1].forEach(importJsOrCss);
+				importKeyword[1].forEach(item => { importJsOrCss( item, importTag ) });
 				return; //!skip iteration of loop 5 lines above
 			}
 		}
 		
-		importJsOrCss(import_);// if you are confused as to why this isnt runnig look at look up 4 lines
+		importJsOrCss(import_, importTag);// if you are confused as to why this isnt runnig look at look up 4 lines
 	})
 }
