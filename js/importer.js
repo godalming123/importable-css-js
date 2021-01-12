@@ -19,7 +19,8 @@ importKeywords = [
 		"flashy.css",
 		"section_img_header.css",
 		"parrelex.css",
-		"create settongs.js"
+		"create settings.js",
+		"img_cycle_animater.css"
 	]]
 ]
 
