@@ -1,0 +1,23 @@
+.img-cycle-master {
+	* {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@for $iteration from 0 through 3 {
+			&:nth-child(#{$iteration}) {
+				transition-delay: $iteration + s;
+				transition: 1s;
+
+				//hide
+				opacity: 0;
+				transform: translateY(-5vh);
+			}
+		}
+
+		&.active > * {
+			opacity: initial;
+			transform: initial;
+		}
+	}
+}
