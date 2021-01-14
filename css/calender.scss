@@ -1,0 +1,116 @@
+$background_color : #fcee6d;
+$element_highlight : $background_color;
+$calendar_color: #29323f;
+
+$day_pill_size : 25px;
+$pill_margin : 8px;
+
+.calendar {
+  background: var(--shade3);
+  font-family: 'Dosis', sans-serif;
+  width: 290px; padding:45px;
+  margin: auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+
+  h1 {
+    text-align: center;
+    color: $element_highlight;
+    margin: 0 0 30px 0;
+  }
+  
+  form {
+		width: auto;
+    position: relative;
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    label.weekday{
+      display: inline-block;
+      width: $day_pill_size; margin: $pill_margin;
+      text-align: center;
+      color: var(--background-lighten);
+    }
+    
+    form {
+      margin:0; padding:0;
+    }
+    
+    label.day{
+      display: inline-block;
+      width: $day_pill_size; margin: $pill_margin;
+      
+      span {
+        display: inline-block;
+        width: $day_pill_size; height:$day_pill_size; line-height: $day_pill_size;
+        border-radius: 50%;
+        border: 2px solid $calendar_color;
+        text-align:center;
+        transition: all .2s linear;
+        cursor: pointer;
+        
+        &:hover {
+          border-color: darken(desaturate($element_highlight, 20), 10);
+        }
+      }
+      
+      &::after {
+				content: "";
+        display: inline-block;
+        position: absolute;
+				width: 0px; height: 0px;
+
+				background-color: darken($element_highlight, 50);
+				background: transparent;
+				
+        border: 5px solid transparent;
+				border-bottom-color: rgba(255,255,255,1);
+				
+				border-radius: 0;
+				margin-top: -62px; margin-left: 7px;
+				opacity: 0;//hide
+				transition: all .2s linear;
+      }
+      
+      .day-info{
+				border:0;
+				opacity:0; height: 0px;//hide
+        position:absolute;
+        margin-top: 40px; 
+        left: 0px; width: 300px;
+				outline: none;
+				font-size: 16px;
+				padding: 0px 6px;
+        transition: 0.2s;
+			}
+      &:hover, &:focus-within{
+				&::after {
+					opacity: 1;
+				}
+				.day-info {
+					padding: 10px 6px;
+          opacity: 1; height: 35px; //show
+          width: 300px;
+          
+          &+ span {
+            border-color: $element_highlight;
+            background: $element_highlight;
+            font-weight: bold;
+            margin-bottom: 65px;
+          }
+				}
+      }
+      
+      &.invalid {
+        opacity: 0;
+        
+        * {
+          display: none;
+        }
+      }
+    }
+  }
+}
