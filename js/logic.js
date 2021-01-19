@@ -1,4 +1,3 @@
-//vars
 const root = document.querySelector(":root");
 
 //functions

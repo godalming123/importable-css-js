@@ -1,6 +1,5 @@
 const importTags = document.querySelectorAll("import");
 const head = document.querySelector("head");
-
 const importKeywords = [
 	["base", [
 		"logic.js.module",

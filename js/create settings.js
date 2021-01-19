@@ -1,4 +1,4 @@
-import {CreateSetting} from "./logic.js";
+import {liveInputToCssVarAndLabel} from "./logic.js";
 
 const settingsContent = document.getElementById("settings").appendChild(
 	document.createElement("content")
