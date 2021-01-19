@@ -2,9 +2,9 @@ import {liveInputToCssVarAndLabel} from "./logic.js";
 
 const settingsContent = document.getElementById("settings").appendChild(
 	document.createElement("content")
-)
+);
 
-CreateSetting(name, cssVarToChange, extraCode, addToVariable, settingType = "range") {
+function CreateSetting(name, cssVarToChange, extraCode, addToVariable, settingType = "range") {
 	if (settingsContent != null) {
 		var settingsContainer = settingsContent.appendChild(document.createElement("label"));
 		settingsContainer.append(name)
