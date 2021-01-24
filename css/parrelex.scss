@@ -1,7 +1,8 @@
 .scrollSlow {
-  transform: translateZ(-1px) scale(2) translateY(-10%);
+  transform: translateZ(-1px) scale(2);
 	z-index: -1 !important;
 	position: relative;
+	transform-origin: 0 0;
 }
 
 html {
@@ -14,5 +15,6 @@ body {
 	overflow-x: hidden;
 	height: 100%;
   perspective: 1px;
-  transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	perspective-origin: 0, 0;
 }
