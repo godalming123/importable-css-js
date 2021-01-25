@@ -5,7 +5,7 @@ content {
 	z-index: 100;
 	position: absolute;
 
-	background: var(--shade3);
+	background: var(--shade3) !important;
 	transform: scaleY(0);
 	transform-origin: top;
 
@@ -63,6 +63,7 @@ dropdown {
 		//position
 		float: right;
 		width: var(--font-size);
+		height: 100%;
 
 		content: ".";//make content render
 		margin-right: 0.11vh;//stop from going outside dropdown

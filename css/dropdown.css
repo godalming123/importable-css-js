@@ -3,7 +3,7 @@ content {
   left: 0;
   z-index: 100;
   position: absolute;
-  background: var(--shade3);
+  background: var(--shade3) !important;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transform-origin: top;
@@ -75,6 +75,7 @@ dropdown::after {
           transition-delay: var(--transition);
   float: right;
   width: var(--font-size);
+  height: 100%;
   content: ".";
   margin-right: 0.11vh;
   -webkit-clip-path: var(--arrow-closed);
