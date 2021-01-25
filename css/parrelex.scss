@@ -3,7 +3,6 @@
   transform: translateZ(-2px) scale(3);
 	z-index: -1 !important;
 	position: relative;
-	transform-origin: 0 0;
 }
 
 html {
@@ -18,8 +17,4 @@ body {
   overflow-y: auto;
   perspective: 1px;
   perspective-origin: 0 0;
-}
-
-.parallax-child {
-
 }
