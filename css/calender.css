@@ -65,6 +65,7 @@
 .calendar .calendar__body .calendar__number > content {
   min-width: 40vh;
   max-width: 60vh;
+  padding: 5px;
 }
 
 .calendar .calendar__body .calendar__number > content > img {
