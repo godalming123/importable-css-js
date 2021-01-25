@@ -64,6 +64,11 @@
 
 .calendar .calendar__body .calendar__number > content {
   min-width: 40vh;
+  max-width: 60vh;
+}
+
+.calendar .calendar__body .calendar__number > content > img {
+  max-width: 100%;
 }
 
 .calendar .calendar__body .calendar__number--current, .calendar .calendar__body .calendar__number:hover {

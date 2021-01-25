@@ -43,6 +43,10 @@
 			
 			& > content {
 				min-width: 40vh;
+				max-width: 60vh;
+				& > img {
+					max-width: 100%
+				}
 			}
 
       &--current,
