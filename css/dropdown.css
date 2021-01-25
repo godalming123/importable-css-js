@@ -10,6 +10,14 @@ content {
           transform-origin: top;
 }
 
+content.centered {
+  -webkit-transform-origin: 0 0 !important;
+          transform-origin: 0 0 !important;
+  left: 50%;
+  -webkit-transform: scale(0) translateX(-50%);
+          transform: scale(0) translateX(-50%);
+}
+
 dropdown {
   --arrow-open: polygon(
 		0 0,
@@ -48,6 +56,11 @@ dropdown:hover, dropdown:focus-within {
 dropdown:hover > content, dropdown:focus-within > content {
   -webkit-transform: initial !important;
           transform: initial !important;
+}
+
+dropdown:hover > content.centered, dropdown:focus-within > content.centered {
+  -webkit-transform: scale(1) translateX(-50%) !important;
+          transform: scale(1) translateX(-50%) !important;
 }
 
 dropdown:hover::after, dropdown:focus-within::after {

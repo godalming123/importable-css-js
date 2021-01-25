@@ -8,6 +8,12 @@ content {
 	background: var(--shade3);
 	transform: scaleY(0);
 	transform-origin: top;
+
+	&.centered {
+		transform-origin: 0 0 !important;
+		left: 50%;
+		transform: scale(0) translateX(-50%);
+	}
 }
 
 dropdown {
@@ -42,6 +48,7 @@ dropdown {
 		box-shadow: var(--shadow);
 		& > content {//hovered dropdown > content
 			transform: initial !important;
+			&.centered { transform: scale(1) translateX(-50%) !important;}
 		}
 		&::after {//hovered dropdown::after
 			clip-path: var(--arrow-open);
