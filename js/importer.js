@@ -4,8 +4,8 @@ const importKeywords = [
 	["base", [
 		"logic.js.module",
 		"style.css",
-		"root.css",
-		"scrollbar.css"
+		"scrollbar.css",
+		"root.css"
 	]],
 
 	["all", [
