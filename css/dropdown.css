@@ -51,6 +51,7 @@ dropdown label {
 dropdown:hover, dropdown:focus-within {
   -webkit-box-shadow: var(--shadow);
           box-shadow: var(--shadow);
+  z-index: 100;
 }
 
 dropdown:hover > content, dropdown:focus-within > content {
