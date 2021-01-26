@@ -10,8 +10,8 @@
     margin: 5px 0px;
   }
   h3 {
-		font-weight: 500;
-		font-size: 4vh;
+    font-weight: 500;
+    font-size: 4vh;
   }
   * {
     background: initial;
@@ -41,15 +41,18 @@
       height: 25px;
       width: 25px;
       color: #ffffff;
-			
-			& > content {
-				min-width: 40vh;
-				max-width: 60vh;
-				padding: 5px;
-				& > img {
-					max-width: 100%
-				}
-			}
+
+      &::after {
+        content: initial;
+      }
+      & > content {
+        min-width: 40vh;
+        max-width: 60vh;
+        padding: 5px;
+        & > img {
+          max-width: 100%;
+        }
+      }
 
       &--current,
       &:hover {

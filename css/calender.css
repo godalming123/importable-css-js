@@ -63,6 +63,10 @@
   color: #ffffff;
 }
 
+.calendar .calendar__body .calendar__number::after {
+  content: initial;
+}
+
 .calendar .calendar__body .calendar__number > content {
   min-width: 40vh;
   max-width: 60vh;
