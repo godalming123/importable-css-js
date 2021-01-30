@@ -69,8 +69,7 @@
 }
 
 .calendar .calendar__body .calendar__number > content {
-  min-width: 40vh;
-  max-width: 60vh;
+  min-width: 25ch;
   padding: 5px;
 }
 
