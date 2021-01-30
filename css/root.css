@@ -2,6 +2,7 @@
   /*genaral vars*/
   --font-size: 3vh;
   --shadow: 0 0 0.5vh 0.25vh var(--shade1);
+  --font-family: none;
   /*colours*/
   --HS-color: 0, 0%;
   --shade1: hsl(var(--HS-color), 100%);
@@ -9,7 +10,6 @@
   --shade2: hsl(var(--HS-color), 10%);
   --lighten: hsla(0, 0%, 100%, 10%);
   --background-lighten: hsla(var(--HS-color), 20%, 80%);
-  --font-family: none;
   --transition: 1s;
   --border-radius: 1vh;
   background: var(--shade2);
@@ -31,5 +31,15 @@
 
 *:hover {
   z-index: 8;
+}
+
+@media (prefers-color-svheme: light) {
+  :root {
+    --shade1: hsl(var(--HS-color), 0%);
+    --shade3: hsl(var(--HS-color), 80%);
+    --shade2: hsl(var(--HS-color), 90%);
+    --lighten: hsla(0, 0%, 0%, 10%);
+    --background-lighten: hsla(var(--HS-color), 80%, 80%);
+  }
 }
 /*# sourceMappingURL=root.css.map */
