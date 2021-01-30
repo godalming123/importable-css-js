@@ -45,8 +45,7 @@
         content: initial;
       }
       & > content {
-        min-width: 40vh;
-        max-width: 60vh;
+        min-width: 25ch;
         padding: 5px;
         & > img {
           max-width: 100%;
