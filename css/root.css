@@ -1,7 +1,7 @@
 :root {
   /*genaral vars*/
   --font-size: 3vh;
-  --shadow: 0 0 0.5vh 0.25vh var(--shade1);
+  --shadow: 0 0 0.5vh 0.25vh rgb(0, 0, 0);
   --font-family: none;
   /*colours*/
   --HS-color: 0, 0%;
