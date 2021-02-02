@@ -33,12 +33,20 @@
   }
 }
 
-@media (prefers-color-svheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     --shade1: hsl(var(--HS-color), 0%);
-    --shade3: hsl(var(--HS-color), 80%);
-    --shade2: hsl(var(--HS-color), 90%);
+    --shade3: hsl(var(--HS-color), 85%);
+    --shade2: hsl(var(--HS-color), 100%);
     --lighten: hsla(0, 0%, 0%, 10%);
     --background-lighten: hsla(var(--HS-color), 80%, 80%);
   }
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+	* {
+		--transition: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
