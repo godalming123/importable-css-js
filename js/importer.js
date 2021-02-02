@@ -33,7 +33,7 @@ function importCss(path, type) {
 	head.appendChild(tag);
 }
 
-function importJs(path, type) {
+function importJs(path, type="") {
 	let tag = document.createElement('script');
 
 	tag.src = path;
