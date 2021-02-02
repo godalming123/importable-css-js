@@ -3,6 +3,7 @@ import {liveInputToCssVarAndLabel} from "./logic.js";
 const settingsContent = document.getElementById("settings").appendChild(
 	document.createElement("content")
 );
+settingsContent.classList.add("centered")
 
 function CreateSetting(name, cssVarToChange, extraCode, addToVariable, settingType = "range") {
 	if (settingsContent != null) {
