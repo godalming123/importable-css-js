@@ -23,5 +23,6 @@ a.flashy {
 
 	&:hover::after, &:focus::after, &:focus-within::after {
 		transform: initial;
+		background-image: linear-gradient(0deg, red, yellow);
 	}
 }
