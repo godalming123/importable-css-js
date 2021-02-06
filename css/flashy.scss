@@ -2,7 +2,7 @@
 	--font-size: 3.5vh;
 	text-decoration: none;
 	text-align: center;
-	background-image: linear-gradient(-45deg, red, yellow);
+	background-image: linear-gradient(45deg, red, yellow);
 	position: relative;
 	overflow: hidden;
 }
@@ -23,6 +23,9 @@ a.flashy {
 
 	&:hover::after, &:focus::after, &:focus-within::after {
 		transform: initial;
+	}
+
+	&:hover, &:focus {
 		background-image: linear-gradient(0deg, red, yellow);
 	}
 }

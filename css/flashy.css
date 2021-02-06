@@ -2,7 +2,7 @@
   --font-size: 3.5vh;
   text-decoration: none;
   text-align: center;
-  background-image: linear-gradient(-45deg, red, yellow);
+  background-image: linear-gradient(45deg, red, yellow);
   position: relative;
   overflow: hidden;
 }
@@ -24,5 +24,10 @@ a.flashy::after {
 a.flashy:hover::after, a.flashy:focus::after, a.flashy:focus-within::after {
   -webkit-transform: initial;
           transform: initial;
+}
+
+a.flashy:hover, a.flashy:focus {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(red), to(yellow));
+  background-image: linear-gradient(0deg, red, yellow);
 }
 /*# sourceMappingURL=flashy.css.map */
