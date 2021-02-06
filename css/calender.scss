@@ -1,32 +1,31 @@
 .calendar {
-  background: rgba(#333333, 0.7);
+  background: var(--background-lighten);
   width: min-content;
-  box-shadow: 1px 1px 4px 2px rgba(#000, 0.25);
-  border-radius: 8px;
-  padding: 20px;
+  box-shadow: var(--shadow);
+  padding: 3.5vh;
 
   h2,
   h3 {
-    margin: 5px 0px;
+    margin: 0.2vh 0;
   }
   h3 {
     font-weight: 500;
     font-size: 4vh;
   }
   * {
-    background: initial;
+		background: initial;
   }
 
   .calendar__body {
+		margin-top: 1.6vh;
     display: grid;
-    grid-template-columns: repeat(7, minmax(25px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+		grid-gap: 2vh;
 
     .calendar__day {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 25px;
       font-weight: 550;
     }
 
@@ -37,16 +36,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 25px;
-      width: 25px;
-      color: #ffffff;
+      height: 4.2vh;
+      width: 4.2vh;
 
       &::after {
         content: initial;
       }
       & > content {
         min-width: 25ch;
-        padding: 5px;
+        padding: 0.6vh;
         & > img {
           max-width: 100%;
         }
@@ -54,8 +52,7 @@
 
       &--current,
       &:hover {
-        background: #009688;
-        color: #fff !important;
+        background: var(--shade3);
       }
     }
   }

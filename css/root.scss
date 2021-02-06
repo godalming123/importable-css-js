@@ -9,7 +9,7 @@
   --shade3: hsl(var(--HS-color), 20%);
   --shade2: hsl(var(--HS-color), 10%);
   --lighten: hsla(0, 0%, 100%, 10%);
-  --background-lighten: hsla(var(--HS-color), 20%, 80%);
+	--background-lighten: hsla(var(--HS-color), 20%, 70%);
   //vars usaully genarated by settings but here incase settings isnt imported
   --transition: 1s;
   --border-radius: 1vh;
@@ -39,7 +39,7 @@
     --shade3: hsl(var(--HS-color), 85%);
     --shade2: hsl(var(--HS-color), 100%);
     --lighten: hsla(0, 0%, 0%, 10%);
-    --background-lighten: hsla(var(--HS-color), 80%, 80%);
+		--background-lighten: hsla(var(--HS-color), 80%, 70%);
   }
 }
 
