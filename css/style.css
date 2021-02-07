@@ -1,18 +1,14 @@
-a, button, input[type="submit"] {
+a, button, input[type=submit] {
   cursor: pointer;
   display: inline-block;
 }
-
-a:hover, a:focus, button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+a:hover, a:focus, button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
+  box-shadow: var(--shadow);
   outline: none;
 }
 
 form {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -22,10 +18,8 @@ footer {
 
 .disabled {
   cursor: not-allowed;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
-
 .disabled * {
   pointer-events: none;
   opacity: 50;
@@ -51,13 +45,16 @@ h2 {
 .callToAction {
   --font-size: 4vh !important;
 }
-
 .callToAction.right {
   float: right;
 }
 
 .img {
   max-width: 100%;
+}
+
+.bg-inherit > * {
+  background: inherit;
 }
 
 /*input {
@@ -81,4 +78,3 @@ h2 {
 		}
 	}
 } ! mobile not working */
-/*# sourceMappingURL=style.css.map */

@@ -1,81 +1,49 @@
 .calendar {
   background: var(--background-lighten);
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
   padding: 3.5vh;
 }
-
 .calendar h2,
 .calendar h3 {
   margin: 0.2vh 0;
 }
-
 .calendar h3 {
   font-weight: 500;
   font-size: 4vh;
 }
-
-.calendar * {
-  background: initial;
-}
-
 .calendar .calendar__body {
   margin-top: 1.6vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-gap: 2vh;
 }
-
 .calendar .calendar__body .calendar__day {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-weight: 550;
 }
-
 .calendar .calendar__body .calendar__number {
-  -webkit-transition: 1s;
   transition: 1s;
   margin: auto;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 4.2vh;
   width: 4.2vh;
 }
-
 .calendar .calendar__body .calendar__number::after {
   content: initial;
 }
-
 .calendar .calendar__body .calendar__number > content {
   min-width: 25ch;
   padding: 0.6vh;
 }
-
 .calendar .calendar__body .calendar__number > content > img {
   max-width: 100%;
 }
-
 .calendar .calendar__body .calendar__number--current, .calendar .calendar__body .calendar__number:hover {
   background: var(--shade3);
 }
-/*# sourceMappingURL=calender.css.map */

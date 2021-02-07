@@ -21,14 +21,11 @@
 * {
   font-family: var(--font-family);
   font-size: var(--font-size);
-  -webkit-transition: var(--transition);
   transition: var(--transition);
   border-radius: var(--border-radius);
-  background: inherit;
   color: inherit;
   scroll-behavior: smooth;
 }
-
 *:hover {
   z-index: 8;
 }
@@ -42,13 +39,10 @@
     --background-lighten: hsla(var(--HS-color), 80%, 70%);
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   * {
     --transition: 0.01ms !important;
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-/*# sourceMappingURL=root.css.map */
