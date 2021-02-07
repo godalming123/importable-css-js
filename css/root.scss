@@ -25,7 +25,8 @@
   font-size: var(--font-size);
   transition: var(--transition);
   border-radius: var(--border-radius);
-  color: inherit;
+	color: inherit;
+	background: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
   &:hover {
     z-index: 8;

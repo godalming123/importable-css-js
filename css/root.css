@@ -24,6 +24,7 @@
   transition: var(--transition);
   border-radius: var(--border-radius);
   color: inherit;
+  background: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
 }
 *:hover {
