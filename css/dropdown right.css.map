@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACC,QADO,AAAA,MAAM,CACb,OAAO,CAAC;EACP,SAAS,EAAE,SAAS;EACpB,gBAAgB,EAAE,IAAI;EACtB,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,IAAI;EACV,UAAU,EAAE,IAAI;EAAC,8CAA8C;CAC/D;;AAPF,AASC,QATO,AAAA,MAAM,AASZ,OAAO,CAAC;EACR,SAAS,EAAE,cAAc;CACzB",
-    "sources": [
-        "dropdown right.scss"
-    ],
-    "names": [],
-    "file": "dropdown right.css"
-}
