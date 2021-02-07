@@ -13,7 +13,7 @@
   //vars usaully genarated by settings but here incase settings isnt imported
   --transition: 1s;
   --border-radius: 1vh;
-  background: var(--shade2);
+  background: var(--shade2) !important;
   color: var(--shade1);
 
   font-size: var(--font-size);
