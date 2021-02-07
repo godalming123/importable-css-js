@@ -1,5 +1,5 @@
 header {
-  position: -webkit-sticky;
+  background: var(--shade2);
   position: sticky;
   top: 0px;
   padding: none;
@@ -7,24 +7,16 @@ header {
   z-index: 50;
   display: block;
   margin: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-shadow: 0 10 4 2 rgba(0, 0, 0, 0.678);
-          box-shadow: 0 10 4 2 rgba(0, 0, 0, 0.678);
+  box-shadow: 0 10 4 2 rgba(0, 0, 0, 0.678);
 }
-
 header * {
   padding: 0px 1px;
   margin: auto auto;
 }
-
 header .hide {
-  -webkit-transform: translateY(-99%);
-          transform: translateY(-99%);
+  transform: translateY(-99%);
 }
-
 header .hide :hover {
   top: 0;
 }
-/*# sourceMappingURL=header.css.map */
