@@ -39,9 +39,7 @@
     --shade3: hsl(var(--HS-color), 85%);
     --shade2: hsl(var(--HS-color), 100%);
     --lighten: hsla(0, 0%, 0%, 10%);
-    --background-lighten: hsla(var(--HS-color), 80%, 80%);
-    --seathrough-background: hsla(var(--shade3), 30%)
-  ;
+    --background-lighten: hsla(var(--HS-color), 80%, 70%);
   }
 }
 
