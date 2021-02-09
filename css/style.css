@@ -53,6 +53,9 @@ h2 {
   max-width: 100%;
 }
 
+.bg-inherit {
+  background: var(--shade2);
+}
 .bg-inherit > * {
   background: inherit;
 }
