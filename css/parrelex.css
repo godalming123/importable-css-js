@@ -1,8 +1,6 @@
 .scrollSlow {
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transform: translateZ(-2px) scale(3);
-          transform: translateZ(-2px) scale(3);
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(3);
   z-index: -1 !important;
   position: relative;
 }
@@ -13,13 +11,9 @@ html {
 }
 
 body {
-  width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-perspective: 1px;
-          perspective: 1px;
-  -webkit-perspective-origin: 0 0;
-          perspective-origin: 0 0;
+  perspective: 1px;
+  perspective-origin: 0 0;
 }
-/*# sourceMappingURL=parrelex.css.map */
