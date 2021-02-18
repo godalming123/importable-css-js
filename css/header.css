@@ -1,22 +1,21 @@
-header {
-  background: var(--shade2);
+span {
+  background: var(--clr-background-lighten);
   position: sticky;
   top: 0px;
-  padding: none;
-  border-radius: none;
+  padding: 0;
+  border-radius: 0;
   z-index: 50;
   display: block;
   margin: auto;
   width: fit-content;
-  box-shadow: 0 10 4 2 rgba(0, 0, 0, 0.678);
 }
-header * {
-  padding: 0px 1px;
-  margin: auto auto;
+span > * {
+  padding: 0 0.1vh;
+  margin: auto;
 }
-header .hide {
+span.hide {
   transform: translateY(-99%);
 }
-header .hide :hover {
-  top: 0;
+span.hide:hover {
+  transform: initial;
 }

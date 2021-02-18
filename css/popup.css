@@ -3,7 +3,7 @@
   overflow: auto;
   opacity: 0%;
   z-index: 1000;
-  background: var(--lighten);
+  background: var(--clr-lighten);
   pointer-events: none;
   position: fixed;
   top: 0;
@@ -11,44 +11,30 @@
   left: 0;
   right: 0;
 }
-
 .popups.backdrop {
   pointer-events: initial;
   opacity: 100%;
 }
-
 .popups > * {
-  background: var(--shade2);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  background: var(--clr-bg);
+  box-shadow: var(--shadow);
   max-width: 80%;
   padding: 1vh;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin: auto;
 }
-
-.popups > *.hide {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+.popups > .hide {
+  transform: scale(0);
   opacity: 0;
-  -webkit-box-shadow: 0px 0px 0px 0px;
-          box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
 }
-
-.popups > *.hide.left {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+.popups > .hide.left {
+  transform: translateX(-100%);
 }
-
-.popups > *.left {
+.popups > .left {
   margin: 0;
   border-radius: 0;
   min-height: 100%;
   max-width: 90%;
 }
-/*# sourceMappingURL=popup.css.map */

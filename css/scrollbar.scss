@@ -1,12 +1,12 @@
 ::-webkit-scrollbar {
-	//positioning
-	width: 1%;
-	min-width: 5px;
-	height: 1%;
-	min-height: 5px;
-
+  //positioning
+  width: 1%;
+  min-width: 5px;
+  height: 1%;
+  min-height: 5px;
 }
-::-webkit-scrollbar-thumb {	width: 1%;
-	background: var(--shade3);
-	border-radius: var(--border-radius);
+::-webkit-scrollbar-thumb {
+  width: 1%;
+  background: var(--clr-grey);
+  border-radius: var(--border-radius);
 }

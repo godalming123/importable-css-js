@@ -7,7 +7,6 @@
 
 ::-webkit-scrollbar-thumb {
   width: 1%;
-  background: var(--shade3);
+  background: var(--clr-grey);
   border-radius: var(--border-radius);
 }
-/*# sourceMappingURL=scrollbar.css.map */

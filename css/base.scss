@@ -1,0 +1,23 @@
+//h1 apply first
+@import "apply first.scss";
+
+//h1 tiny selectors
+@import "variables.scss";
+@import "elements.scss";
+@import "classes.scss";
+
+//h1 genaral
+@import "scrollbar.scss";
+@import "parrelex.scss";
+@import "at querys.scss";
+@import "acnt-colours.scss";
+@import "span.scss";
+
+//h1 buttons and links
+@import "buttons.scss";
+@import "links.scss";
+
+:root {
+	background: var(--clr-bg);
+	color: var(--clr-fg);
+}

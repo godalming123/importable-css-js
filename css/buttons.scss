@@ -1,0 +1,44 @@
+//h1 button
+button,
+input[type="submit"] {// button
+  border: var(--border-size) solid var(--clr-border);
+  padding: 0.2vh 1vh;
+  color: var(--clr-fg);
+  &:hover, &:focus {
+    box-shadow: var(--shadow);
+  }
+}
+
+//h1 button classes
+//h3 btn-contain
+.btn-contain {
+  --clr-border: var(--clr-acnt);
+  background: var(--clr-acnt);
+  color: hsl(0, 0%, var(--L-on-acnt));
+}
+//h3 btn-outline
+.btn-outline {
+  --L-acnt: var(--L-fg-keep-clr) !important;
+  --L-on-acnt: var(--L-bg);
+  --clr-border: var(--clr-acnt);
+  color: var(--clr-acnt);
+  &:hover {
+    background: var(--clr-acnt);
+    color: var(--clr-on-acnt);
+  }
+}
+
+//h1 button and link
+a,
+button,
+input[type="submit"] {
+  cursor: pointer;
+  display: inline-block;
+  background-position: left; //for gradient backgrounds
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.05) translateY(-0.2vh);
+    background-position: right; // for gradient hover effects
+  }
+}

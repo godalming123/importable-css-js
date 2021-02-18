@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+}
+.flex.justify-around {
+  justify-content: space-around;
+}
+.flex.flex-gap {
+  gap: 0.5vh;
+}

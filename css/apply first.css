@@ -1,0 +1,25 @@
+* {
+  transition: 0s;
+}
+
+.loadingScreen {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  transition: 0.2s !important;
+  background: black;
+  border-radius: 0 !important;
+  z-index: 1000;
+  transform: scale(1);
+  clip-path: circle(100% at 50% 50%);
+}
+
+.loaded > * > .loadingScreen {
+  transform: scale(0);
+  clip-path: circle(0% at 50% 50%);
+}
+.loaded *, .loaded *::after, .loaded *::before {
+  transition: var(--transition-duration) ease;
+}

@@ -2,29 +2,24 @@ const importTags = document.querySelectorAll("import");
 const head = document.querySelector("head");
 const importKeywords = [
 	["base", [
-		"logic.js.module",
-		"style.css",
-		"scrollbar.css",
-		"root.css"
+		"base.css",
+		"logic.js.module"
 	]],
 
 	["all", [
 		"dropdown.css",
 		"dropdown_right.css",
 		"popup.css",
-		"header.css",
 		"scroll_snap.css",
 		"futuristic.css",
-		"flashy.css",
-		"section_img_header.css",
-		"parrelex.css",
-		"img_cycle_animater.css",
-		"create settings.js",
-		"popup.js"
+		"create_settings.js.module",
+		"popup.js",
+		"calender.css",
+		"run_last.js"
 	]]
 ]
 
-function importCss(path, type) {
+function importCss(path, type="") {
 	let tag = document.createElement('link'); 
 
 	tag.rel = 'stylesheet';  

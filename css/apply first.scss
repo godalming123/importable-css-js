@@ -1,0 +1,33 @@
+//h1 *
+* {
+  transition: 0s;
+}
+
+//h1 loading screen
+.loadingScreen {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  transition: 0.2s !important;
+  background: black;
+  border-radius: 0 !important;
+  z-index: 1000;
+  transform: scale(1);
+  clip-path: circle(100% at 50% 50%);
+}
+
+//h1 loaded
+.loaded {
+	//h2 loading screen inside
+  & > * > .loadingScreen {
+    transform: scale(0);
+    clip-path: circle(0% at 50% 50%);
+  }
+
+	//h2 *, * after, * before
+  *, *::after, *::before {
+    transition: var(--transition-duration) ease;
+  }
+}

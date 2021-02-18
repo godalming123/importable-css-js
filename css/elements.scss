@@ -1,38 +1,38 @@
-form {
-  display: block;
-  width: max-content;
-}
-
+//h1 footer
 footer {
-  font-size: 2vh;
+	font-size: 2vh;
 }
 
+//h1 headers
+//h2 h1
 h1 {
-  font-size: 6vh;
+	font-size: 6vh;
 }
-
+//h2 h2
 h2 {
-  font-size: 4.5vh;
+	font-size: 4.5vh;
 }
 
+//h1 table
 table {
-  border-spacing: 2vh 2vh;
-}
-table td {
-  text-align: center;
+	border-spacing: 2vh 2vh;
+	td {
+		text-align: center;
+	}
 }
 
-button:hover, button:focus,
-input[type=submit]:hover,
-input[type=submit]:focus,
-a:hover,
-a:focus,
-dropdown:hover,
-dropdown:focus {
-  z-index: 1000;
-  position: relative;
-  --L-acnt: var(--L-acnt-hover);
+//h1 hover effects
+button,
+input[type="submit"],
+a,
+dropdown { // hover effects on buttons, links and dropdowns
+  &:hover, &:focus {
+    z-index: 1000;
+    position: relative;
+    --L-acnt: var(--L-acnt-hover);
+  }
 }
+
 
 /*input {
 	&[type="range"] {

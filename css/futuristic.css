@@ -1,67 +1,21 @@
 .futuristic {
-  --shadow: -2px 2px var(--shade1);
+  --shadow: -0.4vh 0.4vh var(--clr-fg) !important;
   --font-family: "Aviano Future", serif;
   --notch-clip-path: polygon(
-		0 0,
-		calc(100% - 0.4vh) 0%,
-		calc(100% - 3vh) 100%,
-		0% 100%);
+  	0 0,
+  	calc(100% - 0.4vh) 0%,
+  	calc(100% - 3vh) 100%,
+  	0% 100%);
   --border-radius-left: calc(15% + 2vh);
 }
-
 .futuristic .future-car {
-  -webkit-clip-path: var(--notch-clip-path);
-          clip-path: var(--notch-clip-path);
+  clip-path: var(--notch-clip-path);
   border-top-left-radius: var(--border-radius-left);
   border-bottom-left-radius: var(--border-radius-left);
-  border: 0.1vh solid white;
+  border: 0.1vh solid var(--clr-fg);
   overflow: hidden;
   padding-left: 3vh;
   padding-right: 3vh;
+  width: max-content;
+  max-width: 100%;
 }
-
-.futuristic a:hover, .futuristic button:hover, .futuristic input[type="submit"]:hover {
-  -webkit-animation: futuristic 1s;
-          animation: futuristic 1s;
-}
-
-@-webkit-keyframes futuristic {
-  0% {
-    display: none;
-  }
-  12.5% {
-    display: none;
-  }
-  25% {
-    display: initial;
-  }
-  50% {
-    display: none;
-  }
-  100% {
-    display: initial;
-    -webkit-box-shadow: var(--shadow);
-            box-shadow: var(--shadow);
-  }
-}
-
-@keyframes futuristic {
-  0% {
-    display: none;
-  }
-  12.5% {
-    display: none;
-  }
-  25% {
-    display: initial;
-  }
-  50% {
-    display: none;
-  }
-  100% {
-    display: initial;
-    -webkit-box-shadow: var(--shadow);
-            box-shadow: var(--shadow);
-  }
-}
-/*# sourceMappingURL=futuristic.css.map */

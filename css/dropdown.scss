@@ -1,80 +1,114 @@
-content {
-	//position
-	top: 100%;
-	left: 0;
-	z-index: 100;
-	position: absolute;
+//h1 dropdown content
+.dropdown__content {
+  //h2 position
+  text-align: center;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  position: absolute;
 
-	background: var(--shade3) !important;
-	transform: scaleY(0);
-	transform-origin: top;
+  background: var(--clr-grey) !important;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding: var(--border-size);
 
-	&.centered {
-		transform-origin: 0 0 !important;
-		left: 50%;
-		transform: scale(0) translateX(-50%);
-	}
+  //h2 centered
+  &-centered {
+    transform-origin: 0 0 !important;
+    left: 50%;
+    transform: scale(0) translateX(-50%);
+  }
+
+  //h2 links buttons and other dropdowns, dropdown content
+  & > button,
+  & > a,
+  & > .dropdown {
+    width: 100%;
+    transform: initial;
+    border-radius: 0px;
+    box-shadow: none !important;
+    &:hover {
+      background: var(--clr-acnt);
+      color: hsl(0, 0%, var(--L-on-acnt));
+      content {
+        color: var(--clr-fg);
+      }
+    }
+		/*
+		h3 experimental hover effect
+    &:hover::before {
+      transform: initial !important;
+    }
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+
+      transform-origin: left;
+      transform: scaleX(0.05) !important;
+
+      border-radius: 0;
+      background: white;
+    }*/
+  }
 }
 
-dropdown {
-	--arrow-open: polygon(
-		0 0,
-		100% 0,
-		50% 25%,
-		50% 75%,
-		100% 100%,
-		0 100%,
-		50% 75%,
-		50% 25%);
-	--arrow-closed: polygon(
-		0 25%,
-		100% 25%,
-		50% 75%,
-		50% 75%,
-		50% 75%,
-		50% 75%,
-		50% 75%,
-		50% 75%);
-	
-	position: relative;
-	z-index: 50;
-	display: inline-block;
-	
-	label {
-		display: flex;
-	}
+//h1 dropdown
+.dropdown {
+  position: relative;
+  z-index: 50;
+  display: inline-block;
 
-	&:hover, &:focus-within {//hovered dropdown
-		box-shadow: var(--shadow);
-		z-index: 100;// make infront of all other dropdowns
-		& > content {//hovered dropdown > content
-			transform: initial !important;
-			&.centered { transform: scale(1) translateX(-50%) !important;}
-		}
-		&::after {//hovered dropdown::after
-			clip-path: var(--arrow-open);
-		}
-	}
+  //h2 user-focused-dropdown
+  &:hover,
+  &:focus-within {
+    box-shadow: var(--shadow);
 
-	&::after {
-		//transition
-		transition: 0.5s ease;
-		transition-delay: var(--transition);
+    //h3 after, user-focused-dropdown
+    &::after {
+      clip-path: var(--arrow-open);
+    }
 
-		//position
-		float: right;
-		width: var(--font-size);
-		height: 100%;
+    //h3 content, user-focused-dropdown
+    & > .dropdown__content {
+      transform: initial !important;
 
-		content: ".";//make content render
-		margin-right: 0.11vh;//stop from going outside dropdown
-		clip-path: var(--arrow-closed);
-		background: var(--shade3);
-	}
+      //h4 centered content, user-focused-dropdown
+      &-centered {
+        transform: scale(1) translateX(-50%) !important;
+      }
+    }
+  }
+
+  //h2 after, dorpdown
+  &::after {
+    //transition
+    --transition-duration: 0.5s;
+    transition-delay: var(--transition-duration);
+
+    //position
+    display: inline-block; //make transforms work
+    aspect-ratio: 1 / 1;
+    height: 100%;
+
+    content: "."; //make content render
+    clip-path: var(--arrow-closed);
+    background: var(--clr-keep-clr);
+    mix-blend-mode: screen; // force contrast
+  }
 }
 
-#settings > * > * + * {
-	border-top: 0.25vh solid var(--lighten);
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
+//h1 settings setting
+#settings > label {
+  display: flex;
+  & > * + * {
+    border-top: 0.25vh solid var(--lighten);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
 }

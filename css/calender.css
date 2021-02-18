@@ -1,5 +1,5 @@
 .calendar {
-  background: var(--background-lighten);
+  background: var(--clr-background-lighten);
   width: min-content;
   box-shadow: var(--shadow);
   padding: 3.5vh;
@@ -37,13 +37,13 @@
 .calendar .calendar__body .calendar__number::after {
   content: initial;
 }
-.calendar .calendar__body .calendar__number > content {
+.calendar .calendar__body .calendar__number > .dropdown__content {
   min-width: 25ch;
   padding: 0.6vh;
 }
-.calendar .calendar__body .calendar__number > content > img {
+.calendar .calendar__body .calendar__number > .dropdown__content > img {
   max-width: 100%;
 }
 .calendar .calendar__body .calendar__number--current, .calendar .calendar__body .calendar__number:hover {
-  background: var(--shade3);
+  background: var(--clr-acnt);
 }

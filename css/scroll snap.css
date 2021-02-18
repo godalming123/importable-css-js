@@ -2,78 +2,52 @@
   --spacing: 1vh;
   overflow: scroll;
 }
-
-.scroll-snap.align-center * {
+.scroll-snap-align-center * {
   scroll-snap-align: center;
 }
-
-.scroll-snap.align-end * {
+.scroll-snap-align-end * {
   scroll-snap-align: end;
 }
-
 .scroll-snap * {
   scroll-snap-align: start;
 }
-
-.scroll-snap *.title {
-  position: -webkit-sticky;
+.scroll-snap-title {
   position: sticky;
   left: 3vh;
   top: 3vh;
   /*flex-align: top;*/
 }
-
-.scroll-snap.y {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+.scroll-snap-y {
+  scroll-snap-type: y mandatory;
 }
-
-.scroll-snap.y * + * {
+.scroll-snap-y * + * {
   margin-top: var(--spacing);
 }
-
-.scroll-snap.x {
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
   display: flex;
 }
-
-.scroll-snap.x * + * {
+.scroll-snap-x * + * {
   margin-left: var(--spacing);
 }
-
-.scroll-snap.x * {
-  -o-object-fit: cover;
-     object-fit: cover;
+.scroll-snap-x * {
+  object-fit: cover;
   max-width: 90%;
-  /*for mobile*/
   width: 30vh;
-  /*for desktop*/
 }
-
-.scroll-snap.x {
-  /* after and before arrows*/
-}
-
-.scroll-snap.x::after, .scroll-snap.x::before {
+.scroll-snap-x::after, .scroll-snap-x::before {
   background: rgba(0, 0, 0, 0.4);
-  position: -webkit-sticky;
   position: sticky;
   font-size: 10vh;
   padding: 1vh;
   z-index: 5;
   cursor: pointer;
 }
-
-.scroll-snap.x::after {
+.scroll-snap-x::after {
   content: ">";
   right: 0;
 }
-
-.scroll-snap.x::before {
+.scroll-snap-x::before {
   content: "<";
   left: 0;
 }
-/*# sourceMappingURL=scroll snap.css.map */

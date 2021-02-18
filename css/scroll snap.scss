@@ -1,51 +1,58 @@
 .scroll-snap {
-	--spacing: 1vh;
-	overflow: scroll;
+  --spacing: 1vh;
+  overflow: scroll;
 
-	&.align-center * {scroll-snap-align: center;}
-	&.align-end * {scroll-snap-align: end;}
-	* {scroll-snap-align: start;}
+  &-align-center * {
+    scroll-snap-align: center;
+  }
+  &-align-end * {
+    scroll-snap-align: end;
+  }
+  * {
+    scroll-snap-align: start;
+  }
 
-	*.title {
-		position: sticky;
-		left: 3vh;
-		top: 3vh;
-		/*flex-align: top;*/
-	}
-	&.y {
-		* + * {margin-top: var(--spacing);}
-		scroll-snap-type: y mandatory;
-	}
-	&.x {
-		* + * {margin-left: var(--spacing);}
-		scroll-snap-type: x mandatory;
-		display: flex;
-		* {
-			object-fit: cover;
-			max-width: 90%;/*for mobile*/
-			width: 30vh;/*for desktop*/
-		}
-	}
-}
+  &-title {
+    position: sticky;
+    left: 3vh;
+    top: 3vh;
+    /*flex-align: top;*/
+  }
+  &-y {
+    * + * {
+      margin-top: var(--spacing);
+    }
+    scroll-snap-type: y mandatory;
+  }
+  &-x {
+    * + * {
+      margin-left: var(--spacing);
+    }
+    scroll-snap-type: x mandatory;
+    display: flex;
+    * {
+      object-fit: cover;
+      max-width: 90%; //for mobile
+      width: 30vh; //for desktop
+    }
+    // after and before arrows
+    &::after,
+    &::before {
+      background: rgba(0, 0, 0, 0.4);
+      position: sticky;
+      font-size: 10vh;
+      padding: 1vh;
+      z-index: 5;
+      cursor: pointer;
+    }
 
-.scroll-snap.x {/* after and before arrows*/
-	&::after, &::before {
-		background: rgba(0, 0, 0, 0.4);
-		position: sticky;
-		font-size: 10vh;
-		padding: 1vh;
-		z-index: 5;
-		cursor: pointer;
-	}
-
-	&::after {
-		content: ">";
-		right: 0;
-	}
-	&::before {
-		content: "<";
-		left: 0;
-	}
-
-
+    &::after {
+      content: ">";
+      right: 0;
+    }
+    &::before {
+      content: "<";
+      left: 0;
+    }
+  }
 }

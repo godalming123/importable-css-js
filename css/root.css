@@ -1,49 +1,59 @@
-:root {
-  /*genaral vars*/
-  --font-size: 3vh;
-  --shadow: 0 0 0.5vh 0.25vh rgb(0, 0, 0);
-  --font-family: none;
-  /*colours*/
-  --HS-color: 0, 0%;
-  --shade1: hsl(var(--HS-color), 100%);
-  --shade3: hsl(var(--HS-color), 20%);
-  --shade2: hsl(var(--HS-color), 10%);
-  --lighten: hsla(0, 0%, 100%, 10%);
-  --background-lighten: hsla(var(--HS-color), 20%, 70%);
-  --transition: 1s;
-  --border-radius: 1vh;
-  background: var(--shade2) !important;
-  color: var(--shade1);
-  font-size: var(--font-size);
-  font-family: var(--font-size);
-}
-
+/*H -> hue
+	L -> lightness
+	S -> saturation
+	acnt -> accent
+	clr -> color
+	fg -> foreground
+	bg -> background
+	hvr -> hover*/
+*:after,
+*::before,
 * {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  transition: var(--transition);
-  border-radius: var(--border-radius);
-  color: inherit;
+  font-size: 3vh;
+  border-radius: 1vh;
   background: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
-}
-*:hover {
-  z-index: 8;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --shade1: hsl(var(--HS-color), 0%);
-    --shade3: hsl(var(--HS-color), 85%);
-    --shade2: hsl(var(--HS-color), 100%);
-    --lighten: hsla(0, 0%, 0%, 10%);
-    --background-lighten: hsla(var(--HS-color), 80%, 70%);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  * {
-    --transition: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+  --transition-duration: 1s;
+  --shadow: 0 0 0.5vh 0.25vh rgba(0, 0, 0, 0.972);
+  --border-size: 0.2vh;
+  --arrow-open: polygon(
+  	0 0,
+  	100% 0,
+  	50% 25%,
+  	50% 75%,
+  	100% 100%,
+  	0 100%,
+  	50% 75%,
+  	50% 25%
+  );
+  --arrow-closed: polygon(
+  	0 25%,
+  	100% 25%,
+  	50% 75%,
+  	50% 75%,
+  	50% 75%,
+  	50% 75%,
+  	50% 75%,
+  	50% 75%
+  );
+  --L-acnt-hover: calc(30% / var(--L-acnt-hover-change));
+  --clr-acnt: hsl(var(--H-acnt), var(--S-acnt), var(--L-acnt));
+  --clr-on-acnt: hsl(0, 0%, var(--L-on-acnt));
+  --clr-fg: hsl(0, 0%, var(--L-fg));
+  --clr-bg: hsl(0, 0%, var(--L-bg));
+  --clr-grey: hsl(0, 0%, var(--L-grey));
+  --clr-keep-clr: hsl(0, 0%, var(--L-fg-keep-clr));
+  --clr-lighten: hsla(0, 0%, var(--L-fg), 10%);
+  --clr-background-lighten: hsla(0, 0%, var(--L-grey), 70%);
+  --H-1: 188;
+  --H-2: 230;
+  --L-acnt: 30%;
+  --L-acnt-hover-change: 1.4;
+  --L-on-acnt: 100%;
+  --S-acnt: 100%;
+  --L-white-keep-clr: 80%;
+  --L-fg: 100%;
+  --L-bg: 10%;
+  --L-grey: 20%;
+  --L-fg-keep-clr: 80%;
 }

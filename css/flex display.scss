@@ -3,4 +3,7 @@
 	&.justify-around {
 		justify-content: space-around;
 	}
+	&.flex-gap  {
+		gap: 0.5vh
+	}
 }

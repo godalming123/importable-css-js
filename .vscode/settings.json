@@ -1,5 +1,6 @@
 {
 	"python.pythonPath": "C:\\Users\\jamie\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
 	"liveServer.settings.fullReload": true,
-	"liveServer.settings.port": 5502
+	"liveServer.settings.port": 5502,
+	"compile-hero.disable-compile-files-on-did-save-code": false
 }

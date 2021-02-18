@@ -1,16 +1,11 @@
-dropdown.right content {
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+.dropdown-right > .dropdown__content {
+  transform: scaleX(0);
+  transform-origin: left;
   top: 0;
   left: 100%;
   min-height: 100%;
   /*force height to be size of idropdown title*/
 }
-
-dropdown.right::after {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.dropdown-right:after {
+  transform: rotate(-90deg);
 }
-/*# sourceMappingURL=dropdown right.css.map */

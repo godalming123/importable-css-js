@@ -1,0 +1,27 @@
+//h1 acnt-grey
+.acnt-grey {
+  --S-acnt: 0%;
+  --H-acnt: 0;
+  --L-on-acnt: var(--L-fg);
+  --L-acnt: var(--L-grey);
+  --L-acnt-hover: calc(var(--L-grey) / var(--L-acnt-hover-change));
+}
+
+//h1 acnt-1
+.acnt-1 {
+  --H-acnt: var(--H-1);
+}
+
+//h1 acnt-2
+.acnt-2 {
+  --H-acnt: var(--H-2);
+}
+
+//h1 acnt-gradient
+.acnt-gradient {
+  --clr-acnt: linear-gradient(
+    90deg,
+    hsl(var(--H-1), var(--S-acnt), var(--L-acnt)),
+    hsl(var(--H-2), var(--S-acnt), var(--L-acnt))
+  );
+}

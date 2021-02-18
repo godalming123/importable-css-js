@@ -1,5 +1,7 @@
-dropdown.right{
-	content {
+//h1 dropdown-right
+.dropdown-right{
+	//h2 content dropdown-right
+	& > .dropdown__content {
 		transform: scaleX(0);
 		transform-origin: left;
 		top: 0;
@@ -7,7 +9,8 @@ dropdown.right{
 		min-height: 100%;/*force height to be size of idropdown title*/
 	}
 
-	&::after {
+	//h2 after dropdown-right
+	&:after {
 		transform: rotate(-90deg);
 	}
 }
