@@ -43,7 +43,7 @@ function importJsOrCss(file, importTag) {
 	let parts = file.split(".");
 	let importType = parts[2];
 	let importEnding = parts[1];
-	let path = (importTag.getAttribute("path") + "/" + importEnding + "/" + parts[0] + "." + importEnding).replaceAll("_", " ");
+	let path = (importTag.getAttribute("path") + importEnding + "/" + parts[0] + "." + importEnding).replaceAll("_", " ");
 
 	if (importEnding == "css") { importCss(path, importType); }
 	else if (importEnding == "js") { importJs(path, importType); }
