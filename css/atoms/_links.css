@@ -1,0 +1,26 @@
+a {
+  color: hsl(var(--H-1), 100%, var(--L-fg-keep-clr)) !important;
+  padding: 0.1vh 0.4vh;
+  text-decoration: none;
+}
+
+.hover-underline, a {
+  position: relative;
+  visibility: hidden;
+}
+.hover-underline::after, a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.3vh;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-duration) ease;
+  background: var(--clr-on-acnt);
+}
+.hover-underline:hover::after, .hover-underline:focus::after, .hover-underline:focus-within::after, a:hover::after, a:focus::after, a:focus-within::after {
+  transform: initial;
+  transform-origin: right;
+}

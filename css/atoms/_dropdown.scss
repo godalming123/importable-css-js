@@ -1,0 +1,115 @@
+//h1 dropdown content
+.dropdown__content {
+  //h2 position
+	display: initial !important;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  position: absolute;
+
+  background: var(--clr-grey) !important;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding: var(--border-size);
+
+  //h2 centered
+  &-centered {
+    transform-origin: 0 0 !important;
+    left: 50%;
+    transform: scale(0) translateX(-50%);
+  }
+
+  //h2 links buttons and other dropdowns, dropdown content
+  & > button,
+  & > a,
+  & > .dropdown {
+    width: 100%;
+    transform: initial;
+    border-radius: 0px;
+    box-shadow: none !important;
+    &:hover {
+      --clrfl-bg: var(--clr-acnt-real);
+      --clfl-fg: hsl(0, 0%, var(--L-on-acnt));
+      content {
+        color: var(--clr-fg);
+      }
+    }
+		/*
+		h3 experimental hover effect
+    &:hover::before {
+      transform: initial !important;
+    }
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+
+      transform-origin: left;
+      transform: scaleX(0.05) !important;
+
+      border-radius: 0;
+      background: white;
+    }*/
+  }
+}
+
+//h1 dropdown
+.dropdown {
+  position: relative;
+  z-index: 50;
+  display: inline-block;
+
+  //h2 user-focused-dropdown
+  &:hover,
+  &:focus-within {
+    box-shadow: var(--shadow);
+
+    //h3 after, user-focused-dropdown
+    &::after {
+      clip-path: var(--arrow-open);
+    }
+
+    //h3 content, user-focused-dropdown
+    & > .dropdown__content {
+      transform: initial !important;
+
+      //h4 centered content, user-focused-dropdown
+      &-centered {
+        transform: scale(1) translateX(-50%) !important;
+      }
+    }
+  }
+
+  //h2 after, dorpdown
+  &::after {
+    //transition
+    --transition-duration: 0.5s;
+    transition-delay: var(--transition-duration);
+
+    //position
+    display: inline-block; //make transforms work
+		width: 1rem;
+    height: 1rem;
+
+    content: "."; //make content render
+    clip-path: var(--arrow-closed);
+    background: var(--clr-keep-clr);
+    mix-blend-mode: screen; // force contrast
+  }
+}
+
+//h1 settings setting
+#settings > label {
+  display: flex;
+  & > * + * {
+    border-top: 0.25vh solid var(--lighten);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

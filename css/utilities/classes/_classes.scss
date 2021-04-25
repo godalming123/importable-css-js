@@ -1,0 +1,30 @@
+//h1 disabled
+.disabled {
+	filter: grayscale(100%);
+	opacity: 50%;
+	pointer-events: none;
+}
+
+//h1 stacking content
+.stackingContext {
+	//add stacking context
+	position: relative;
+	z-index: 1;
+}
+
+//h1 call to acntion
+.callToAction {
+	--font-size: 4vh !important;
+}
+
+//h1 imgs
+.img {
+	max-width: 100%;
+}
+
+//h1 bg-inherit
+.bg-inherit {
+	& > * {
+		background: inherit;
+	}
+}

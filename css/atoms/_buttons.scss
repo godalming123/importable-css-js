@@ -1,0 +1,44 @@
+//h1 button
+button,
+input[type="submit"] {// button
+  border: var(--border-size) solid var(--clr-border);
+  padding: 0.2vh 1vh;
+  &:hover, &:focus {
+    box-shadow: var(--shadow);
+    filter: brightness(var(--L-acnt-hover-change));
+  }
+}
+
+//h1 button classes
+//h3 btn-contain
+.btn-contain {
+	--clrfl-bg: var(--clr-acnt-real);
+	--clrfl-fg: hsl(0, 0%, var(--L-on-acnt));
+  --clr-border: var(--clrfl-bg);
+}
+//h3 btn-outline
+.btn-outline {
+  --L-acnt: var(--L-fg-keep-clr) !important;
+  --L-on-acnt: var(--L-bg);
+  --clr-border: var(--clr-acnt-real);
+  --clrfl-fg: var(--clr-acnt-real);
+	&:hover, &:focus {
+		--clrfl-bg: var(--clr-acnt-real);
+		--clrfl-fg: var(--clr-on-acnt)
+	}
+}
+
+//h1 button and link
+a,
+button,
+input[type="submit"] {
+  cursor: pointer;
+  display: inline-block;
+  background-position: left; //for gradient backgrounds
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.05) translateY(-0.2vh);
+    background-position: right; // for gradient hover effects
+  }
+}

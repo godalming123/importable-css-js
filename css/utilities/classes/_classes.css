@@ -1,0 +1,22 @@
+.disabled {
+  filter: grayscale(100%);
+  opacity: 50%;
+  pointer-events: none;
+}
+
+.stackingContext {
+  position: relative;
+  z-index: 1;
+}
+
+.callToAction {
+  --font-size: 4vh !important;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.bg-inherit > * {
+  background: inherit;
+}

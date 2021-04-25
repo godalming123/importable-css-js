@@ -1,0 +1,36 @@
+//h1 a
+a {
+  color: hsl(var(--H-1), 100%, var(--L-fg-keep-clr)) !important;
+  padding: 0.1vh 0.4vh;
+  text-decoration: none;
+}
+
+//h1 hover-underline effect
+.hover-underline, a {
+  position: relative;
+	visibility: hidden;
+	
+	//h2 after
+	&::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.3vh;
+
+    transform: scaleX(0);
+		transform-origin: left;
+		transition: var(--transition-duration) ease;
+
+    background: var(--clr-on-acnt);
+  }
+
+	//h2 user focused after
+  &:hover::after,
+  &:focus::after,
+  &:focus-within::after {
+    transform: initial;
+		transform-origin: right;
+  }
+}

@@ -1,0 +1,45 @@
+button,
+input[type=submit] {
+  border: var(--border-size) solid var(--clr-border);
+  padding: 0.2vh 1vh;
+}
+button:hover, button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  box-shadow: var(--shadow);
+  filter: brightness(var(--L-acnt-hover-change));
+}
+
+.btn-contain {
+  --clrfl-bg: var(--clr-acnt-real);
+  --clrfl-fg: hsl(0, 0%, var(--L-on-acnt));
+  --clr-border: var(--clrfl-bg);
+}
+
+.btn-outline {
+  --L-acnt: var(--L-fg-keep-clr) !important;
+  --L-on-acnt: var(--L-bg);
+  --clr-border: var(--clr-acnt-real);
+  --clrfl-fg: var(--clr-acnt-real);
+}
+.btn-outline:hover, .btn-outline:focus {
+  --clrfl-bg: var(--clr-acnt-real);
+  --clrfl-fg: var(--clr-on-acnt) ;
+}
+
+a,
+button,
+input[type=submit] {
+  cursor: pointer;
+  display: inline-block;
+  background-position: left;
+}
+a:hover, a:focus,
+button:hover,
+button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  outline: none;
+  transform: scale(1.05) translateY(-0.2vh);
+  background-position: right;
+}

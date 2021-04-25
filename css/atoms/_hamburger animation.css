@@ -1,0 +1,20 @@
+.burger.burger-slip .burger-lines:after, .burger.burger-slip .burger-lines:before {
+  width: 2em;
+}
+.burger.burger-slip .burger-lines, .burger.burger-slip .burger-lines:after, .burger.burger-slip .burger-lines:before {
+  transition: all 0.2s;
+}
+.burger.burger-slip.open .burger-lines {
+  transform: translateX(-2em);
+  background-color: transparent;
+}
+.burger.burger-slip.open .burger-lines:before, .burger.burger-slip.open .burger-lines:after {
+  left: 0.5em;
+  top: 0px;
+}
+.burger.burger-slip.open .burger-lines:before {
+  transform: translateX(2em) rotate(135deg);
+}
+.burger.burger-slip.open .burger-lines:after {
+  transform: translateX(2em) rotate(-135deg);
+}

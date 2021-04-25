@@ -1,0 +1,65 @@
+/*H -> hue
+	L -> lightness
+	S -> saturation
+	acnt -> accent
+	clr -> color
+	fg -> foreground
+	bg -> background
+	hvr -> hover*/
+*:after,
+*::before,
+* {
+  font-size: 3vh;
+  border-radius: 0.3em;
+  background: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+  --transition-duration: 1s;
+  --shadow: 0 0 0.5vh 0.25vh rgba(0, 0, 0, 0.972);
+  --border-size: 0.2vh;
+  --arrow-open: polygon(
+    0 0,
+    100% 0,
+    50% 25%,
+    50% 75%,
+    100% 100%,
+    0 100%,
+    50% 75%,
+    50% 25%
+  );
+  --arrow-closed: polygon(
+    0 25%,
+    100% 25%,
+    50% 75%,
+    50% 75%,
+    50% 75%,
+    50% 75%,
+    50% 75%,
+    50% 75%
+  );
+  --knopf-luminosity: var(--L-fg-keep-clr);
+  --knopf-hue: var(--H-1);
+  --knopf-white: 0 100% var(--clr-bg);
+  --knopf-border-radius: 1vh;
+  --H-1: 190;
+  --H-2: calc(var(--H-1) + 40);
+  --L-acnt: 30%;
+  --L-on-acnt: 100%;
+  --L-acnt-hover-change: 0.8;
+  --L-fg: 100%;
+  --L-bg: 10%;
+  --L-grey: 20%;
+  --L-fg-keep-clr: 80%;
+  --clr-acnt: hsl(var(--H-acnt), 100%, var(--L-acnt));
+  --clr-acnt-real: var(
+    --clr-acnt,
+    hsl(0, 0%, var(--L-acnt))
+  );
+  --clr-on-acnt: hsl(0, 0%, var(--L-on-acnt));
+  --clr-fg: hsl(0, 0%, var(--L-fg));
+  --clr-bg: hsl(0, 0%, var(--L-bg));
+  --clr-grey: hsl(0, 0%, var(--L-grey));
+  --clr-keep-clr: hsl(0, 0%, var(--L-fg-keep-clr));
+  --clr-lighten: hsla(0, 0%, var(--L-fg), 10%);
+  --clr-background-lighten: hsla(0, 0%, var(--L-grey), 70%);
+  --popup-bg: hsla(0, 0%, 0%, 0.5);
+}
